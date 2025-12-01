@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Premature Birth Risk Predictor</title>
    <link rel="stylesheet" href="css/index.css">
+     <script defer src="js/home.js"></script>
 </head>
 <body>
-  <div class="animated-bg"></div>
+  <div class="animated-bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
   <div class="particles" id="particles"></div>
 
-  <header class="header" id="header">
+  <header class="header">
     <h1 class="logo"><a href="index.html">Birth Risk Predictor</a></h1>
     <nav id="navMenu" class="nav">
       <a href="login.html">Login</a>
@@ -20,168 +26,56 @@
 
   <main class="main">
     <section class="hero">
-      <div class="hero-content">
-        <div class="badge">✨ AI-Powered Healthcare</div>
-        <h2>Predict with Precision</h2>
-        <p>Advanced machine learning technology providing comprehensive premature birth risk assessment through clinical data analysis and lifestyle evaluation.</p>
-        
-        <div class="cta-group">
-          <a href="form.html" class="button button-primary">
-            <span>Start Assessment</span>
-            <span>→</span>
-          </a>
-          <a href="#features" class="button button-secondary">
-            <span>Learn More</span>
-          </a>
-        </div>
+      <div class="hero-badge">✨ AI-Powered Assessment</div>
+      <h2>Predict with Precision</h2>
+      <p>Advanced machine learning algorithms analyze clinical and lifestyle data to provide accurate premature birth risk assessment in seconds.</p>
+      
+      <div class="cta-group">
+        <a href="form.html" class="button-primary">
+          <span>Start Assessment</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
 
-        <div class="stats">
-          <div class="stat-card">
-            <div class="stat-number">95%</div>
-            <div class="stat-label">Accuracy Rate</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">10k+</div>
-            <div class="stat-label">Assessments</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Available</div>
-          </div>
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-number">95%</span>
+          <span class="stat-label">Accuracy Rate</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">10K+</span>
+          <span class="stat-label">Assessments Done</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">&lt;30s</span>
+          <span class="stat-label">Average Time</span>
         </div>
       </div>
 
-      <div class="wave-divider"></div>
-
-      <div class="features" id="features">
-        <div class="feature-card">
-          <span class="feature-icon">🔬</span>
-          <h3>Clinical Intelligence</h3>
-          <p>Powered by cutting-edge algorithms trained on thousands of clinical cases, delivering evidence-based risk predictions with exceptional accuracy.</p>
+      <div class="features">
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🧬</span>
+            <h3>Advanced Analysis</h3>
+            <p>Multi-factor risk assessment using the latest medical research and comprehensive data patterns</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Instant Results</h3>
+            <p>Get detailed risk evaluation with actionable insights in under 30 seconds</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔐</span>
+            <h3>Privacy First</h3>
+            <p>Bank-level encryption ensures your sensitive health data remains completely secure</p>
+          </div>
         </div>
-        <div class="feature-card">
-          <span class="feature-icon">⚡</span>
-          <h3>Instant Analysis</h3>
-          <p>Receive comprehensive risk evaluation within seconds. Our streamlined process delivers detailed insights and actionable recommendations instantly.</p>
-        </div>
-        <div class="feature-card">
-          <span class="feature-icon">🔒</span>
-          <h3>Secure & Confidential</h3>
-          <p>Your health information is protected with bank-level encryption and strict privacy protocols. Your data never leaves our secure servers.</p>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <div class="testimonial-text">
-          "This tool provided invaluable insights that helped guide important conversations with my healthcare provider. The interface is intuitive and the results are easy to understand."
-        </div>
-        <div class="testimonial-author">— Sarah M., Expecting Mother</div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>⚕️ Medical Disclaimer: This tool provides informational risk assessment only and does not replace professional medical advice, diagnosis, or treatment. Always consult qualified healthcare professionals for medical decisions.</p>
+    <p>⚕️ Medical Disclaimer: This tool provides informational risk assessment only and does not replace professional medical advice. Always consult qualified healthcare providers.</p>
   </footer>
-
-  <script>
-    // Create floating particles
-    const particlesContainer = document.getElementById('particles');
-    for (let i = 0; i < 50; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.animationDelay = Math.random() * 10 + 's';
-      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-      particlesContainer.appendChild(particle);
-    }
-
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-
-    // Parallax effect on scroll
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.hero-content');
-      parallaxElements.forEach(el => {
-        el.style.transform = `translateY(${scrolled * 0.3}px)`;
-      });
-    });
-
-    // Interactive hover effects on cards
-    const cards = document.querySelectorAll('.feature-card, .stat-card');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.02)`;
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
-    });
-
-    // Number counter animation for stats
-    const animateNumbers = () => {
-      const stats = document.querySelectorAll('.stat-number');
-      stats.forEach(stat => {
-        const target = stat.innerText;
-        const isPercentage = target.includes('%');
-        const isPlus = target.includes('+');
-        const numericValue = parseInt(target.replace(/[^\d]/g, ''));
-        
-        let current = 0;
-        const increment = numericValue / 50;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= numericValue) {
-            current = numericValue;
-            clearInterval(timer);
-          }
-          stat.innerText = Math.floor(current) + (isPercentage ? '%' : '') + (isPlus ? 'k+' : '');
-        }, 30);
-      });
-    };
-
-    // Trigger number animation when stats come into view
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          animateNumbers();
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-
-    const statsSection = document.querySelector('.stats');
-    if (statsSection) observer.observe(statsSection);
-  </script>
 </body>
 </html>
