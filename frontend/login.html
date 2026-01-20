@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="css/index.css">   <!-- reuse main theme -->
-  <link rel="stylesheet" href="css/login.css">   <!-- login-specific -->
+  <link rel="stylesheet" href="css/index.css">   
+  <link rel="stylesheet" href="css/login.css">   
 </head>
 <body>
 
-  <!-- ===== HEADER (same as index) ===== -->
+  <!-- HEADER ===== -->
   <header class="header">
     <a href="index.html" style="text-decoration: none; color: inherit;">
-     <h1 class="logo" style="cursor: pointer;">Birth Risk Predictor</h1>
+     <h1 class="logo" style="cursor: pointer;">PreTermCare</h1>
     </a>
 
     <nav id="navMenu" class="nav">
@@ -51,6 +51,9 @@
       });
 
       const data = await res.json();
+      const msg = data.message || (res.ok ? "Login successful" : "Login failed");
+      message.textContent = msg;
+      message.style.color = res.ok ? "green" : "red"
       alert(data.message);
 
       if (res.ok) {
