@@ -14,7 +14,7 @@ body {
 /* Upload card */
 .upload-card {
   background: #ffffff;
-  padding: 35px;
+  padding: 32px;
   width: 100%;
   max-width: 520px;
   border-radius: 14px;
@@ -24,13 +24,13 @@ body {
 
 /* Icon */
 .upload-icon {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 44px;
+  margin-bottom: 8px;
 }
 
 /* Heading */
 .upload-card h2 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   color: #1f2937;
 }
 
@@ -38,31 +38,26 @@ body {
 .subtitle {
   font-size: 14px;
   color: #4b5563;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 /* Info box */
 .info-box {
   background: #f0f7ff;
   border: 1px solid #cfe7ff;
-  padding: 15px;
+  padding: 14px;
   border-radius: 8px;
   text-align: left;
-  margin-bottom: 20px;
-  font-size: 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
 }
 
 .info-box ul {
-  margin: 10px 0 0 0;
-  padding-left: 18px;
-}
-
-.info-box li {
-  margin-bottom: 6px;
+  margin: 6px 0 0 18px;
 }
 
 /* File input */
-input[type="file"] {
+#imageInput {
   width: 100%;
   padding: 12px;
   border: 2px dashed #cbd5e1;
@@ -71,9 +66,9 @@ input[type="file"] {
   cursor: pointer;
 }
 
-/* Submit button */
-button {
-  margin-top: 20px;
+/* Button */
+#imageForm button {
+  margin-top: 18px;
   width: 100%;
   padding: 13px;
   background-color: #66b5ea;
@@ -85,21 +80,22 @@ button {
   font-weight: 600;
 }
 
-button:hover {
+#imageForm button:hover {
   background-color: #4fa3db;
 }
 
 /* Loader */
 #loader {
-  margin-top: 20px;
+  margin-top: 14px;
   font-size: 14px;
   color: #2563eb;
   font-weight: 600;
+  display: none;
 }
 
 /* Note */
 .note {
-  margin-top: 15px;
+  margin-top: 12px;
   font-size: 12px;
   color: #6b7280;
 }
